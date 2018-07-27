@@ -1,13 +1,16 @@
 <h1>All Articles</h1>
 
-<ul id = "articles">
-	<% @articles.each do |article|%>
-		<li>
-			<%= link_to article.title, article_path(article) %>
-		</li>
-	<% end %>
-	<% if logged_in? %>
-		<%= link_to "Create a New Article", new_article_path, class: 'article_title' %><br /><br />
-	<% end %>
-	<%= link_to "List of Article Tags", tags_path %>
-</ul>
+<div id = "articles_container">
+	<ul id = "articles">
+		<% @articles.each do |article|%>
+			<li>
+				<%= link_to article.title, article_path(article) %>
+			</li>
+		<% end %>
+		<br />
+		<% if logged_in? %>
+			<strong><%= link_to "Create a New Article", new_article_path, class: 'article_title' %></strong><br /><br />
+		<% end %>
+		<i><%= link_to "List of Article Tags", tags_path %></i>
+	</ul>
+</div>

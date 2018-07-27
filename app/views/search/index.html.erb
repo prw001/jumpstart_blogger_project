@@ -1,0 +1,12 @@
+<h1>Search</h1>
+<p id="search_home">
+		<%= form_tag("/show", method: 'get') do %>
+		<% months = ['01 - Jan', '02 - Feb', '03 - Mar', '04 - Apr', '05 - May', '06 - Jun', '07 - Jul', '08 - Aug', '09 - Sept', '10 - Oct', '11 - Nov', '12 - Dec'] %>
+		<% years = ['2016', '2017', '2018'] %>
+		<%= label_tag 'Select Month:', nil, class: 'search_home_field_label'  %><br/>
+		<%= select_tag('month', options_for_select(months, 'Jan'), {:class => 'search_home_select_field'}) %><br/>
+		<%= label_tag 'Select Year:', nil, class: 'search_home_field_label' %><br/>
+		<%= select_tag('year', options_for_select(years, '2018'), {:class => 'search_home_select_field'})%><br/>
+		<%= submit_tag("search", {:id => 'search_home_submit_button'}) %>
+	<% end %>
+</p>

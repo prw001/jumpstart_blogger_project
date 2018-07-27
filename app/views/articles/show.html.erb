@@ -1,6 +1,16 @@
 <h1><%= @article.title %></h1>
+<h3 class="article_timestamp" id ="posted_at">
+	<i>Originally posted on: </i>
+	<%= "#{@article.created_at.to_s}" %>
+</h3>
+<% if @article.created_at != @article.updated_at %>
+	<h3 class="article_timestamp" id ="updated_at">
+		<i>Last updated: </i>
+		<%= "#{@article.updated_at.to_s}" %>
+	</h3>
+<% end %>
 <p>
-	Tags:
+	<strong>Tags:</strong>
 	<% @article.tags.each do |tag| %>
 		<%= link_to tag.name, tag_path(tag) %>
 	<% end %>
@@ -10,10 +20,13 @@
 	<% end %>
 </p>
 <p><%= @article.body %></p>
-<h3>Comments (<%= @article.comments.size %>)</h3>
+<p id="view_count"><%= "#{@article.impressionist_count} View(s)" %>
+<h4 class="comment_title"><strong>Comments</strong> (<%= @article.comments.size %>)</h3>
 	<%= render partial: 'articles/comment', collection: @article.comments %>
 <%= render partial: 'comments/form' %>
+<span class = "search_result_link">
 <%= link_to "<< Back to Articles List", articles_path %>
+</span>
 <% if logged_in? %>
 	<%= link_to "edit", edit_article_path(@article) %>
 	<%= link_to "delete", article_path(@article), data: {confirm: "Really delete the article?"}, method: :delete%>

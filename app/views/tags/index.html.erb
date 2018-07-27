@@ -1,14 +1,18 @@
 <h1>Tag List</h1>
-<p>
-	Tags:
+<p class = "all_tags_body">
+	Tags:<br/><br/>
 	<% @tags.each do |tag| %>
-		<%= link_to tag.name, tag_path(tag) %>
+		<span class = "search_result_link">
+			<strong><%= link_to tag.name, tag_path(tag) %></strong>
+		</span>
 		<% if logged_in? %>
 			<%= link_to "delete tag", tag_path(tag), method: :delete, data: {confirm: "Delete this tag?"}%>
 		<% end %>
 		<br/>
 	<% end %>
 </p>
-<p>
-	<%= link_to "Articles", articles_path %>
+<p id = "all_articles_link">
+	<span class = "search_result_link">
+		<%= link_to "All Articles >>", articles_path %>
+	</span>
 </p>

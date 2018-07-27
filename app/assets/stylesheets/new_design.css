@@ -1,0 +1,360 @@
+body{
+	padding: 100px 0 40px 15%;
+	background: #E0E0E0;
+}
+
+.flash{
+	padding-left: 110px;
+	font-size: 14px;
+	color: #342f2f;
+	font-weight: 600;
+	background: whitesmoke;
+	height: auto;
+	line-height: 30px;
+	position: relative;
+	margin: 0;
+	width: 300px;
+	left: 243px;
+}
+
+#navbar{
+	position: relative;
+	float: left;
+	left: 220px;
+	width: 200px;
+	background: #eb9422;
+	border-bottom: solid 2px lightblue;
+	border-left: 4px solid whitesmoke;
+	border-top: 1px solid whitesmoke;
+	border-right: none;
+	height: auto;
+	min-height: 560px;
+	padding: 20px;
+	text-align: left;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	color: #342f2f;
+	background-image: url("White_left_arrow.jpg");
+	background-repeat: no-repeat;
+	background-size: 40px 60px;
+}
+
+#navbar:hover{
+	left: 0;
+	width: 200px;
+	transition: 0.4s ease;
+	font-size: 1.2em;
+	text-align: center;
+	border-top-left-radius: 14px;
+	border-bottom-left-radius: 14px;
+	box-shadow: 2px 0px 0px 1px darkgray;
+	z-index: 0;
+	background-image: none;
+}
+
+#navbar h3{
+	color: #342f2f;
+	font-size: 18px;
+	text-align: center;
+	font-weight: 600;
+}
+
+#navbar:hover h3{
+	color: #401608;
+}
+
+.navbar_list{
+	text-align: left;
+	margin-bottom: 60px;
+	padding: 10px 0 0 40px;
+}
+
+.navbar_list a{
+	text-decoration: none;
+	color: #342f2f;
+}
+
+#navbar:hover .navbar_list a{
+	color: #315864;
+	text-align: center;
+	transition: 0.3s;
+}
+
+#navbar .navbar_list .nav_item a:hover{
+	transition: 0.2s ease;
+	text-decoration: underline;
+	color: whitesmoke;
+}
+
+.nav_item{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: center;
+}
+
+#see_all_list{
+	position: relative;
+	right: 18px;
+}
+
+#popular_list{
+	position: relative;
+	right: 18px;
+}
+
+ul{
+	list-style: none;
+}
+
+.navbar_select_field{
+	width: 120px;
+	height: 28px;
+	font-size: 14px;
+	border-radius: 2px;
+	border: 2px solid aliceblue;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	color: #420d01;
+}
+
+.navbar_select_field:hover{
+	box-shadow: 0px 0px 1px 1px brown;
+}
+
+#navbar_submit_button{
+	width: 90px;
+	height: 28px;
+	margin-top: 8px;
+	font-size: 14px;
+	background: #e4f2ff;
+	border: 2px outset #12203d;
+}
+
+#navbar_submit_button:hover{
+	background: aliceblue;
+}
+
+#navbar_submit_button:active{
+	box-shadow: none;
+	background: lightgray;
+}
+
+#article_search{
+	text-align: center;
+}
+
+.search_select{
+	width: 90%;
+	font-size: 14px;
+	border-radius: 0;
+	background: #dae8ed;
+	color: #420d01;
+	font-weight: 600;
+	margin-bottom: 6px;
+}
+
+.search_select:hover{
+	box-shadow: 0px 1px 0px 1px #420d01;
+	cursor: pointer;
+}
+
+#search_button{
+	width: 65%;
+	height: 24px;
+	border-radius: 1px;
+	border: 2px outset lightblue;
+	box-shadow: 0px 1px 1px 0 darkgray;
+}
+
+#search_button:hover{
+	cursor: pointer;
+}
+
+#search_button:active{
+	border: none;
+	background: darkgray;
+	box-shadow: none;
+	color: #eee;
+}
+
+#container{
+	width: auto;
+	min-width: 600px;
+	position: relative;
+	display: inline-block;
+	padding: 20px 40px;
+	border: solid 1px lightblue;
+	border-left: none;
+	border-right: none;
+	height: auto;
+	min-height: 560px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	box-shadow: -2px 0px 1px 1px whitesmoke;
+	background-image: -o-linear-gradient(right, #8FCEE6 0%, #E0E0E0 100%);
+	background-image: -moz-linear-gradient(right, #8FCEE6 0%, #E0E0E0 100%);
+	background-image: -webkit-linear-gradient(right, #8FCEE6 0%, #E0E0E0 100%);
+	background-image: -ms-linear-gradient(right, #8FCEE6 0%, #E0E0E0 100%);
+	background-image: linear-gradient(to right, #8FCEE6 0%, #E0E0E0 100%);
+}
+
+#content{
+	border-left: 2px solid whitesmoke;
+	min-height: 540px;
+	padding-left: 20px;
+}
+
+#content h1{
+	color: #4f1d12;
+	padding-left: 40px;
+}
+
+#articles_container a{
+	text-decoration: none;
+	color: #34170F;
+	font-size: 16px;
+}
+
+#articles_container a:hover{
+	text-decoration: underline;
+}
+
+.article_timestamp{
+	font-size: 14px;
+	color: #361c0f;
+	font-weight: 400;
+	font-family: Arial, sans-serif;
+}
+
+#view_count{
+	font-size: 16px;
+	font-family: Arial, sans-serif;
+	color: #5e3713;
+}
+
+#divider_line{
+	width: 50%;
+	margin: 0;
+	position: relative;
+	margin-top: 40px;
+	color: whitesmoke;
+	border: 1px solid whitesmoke;
+	position: relative;
+	right: 20px;
+}
+
+.comment_title{
+	font-size: 16px;
+	font-weight: normal;
+
+}
+
+.comment_label{
+	font-size: 14px;
+	font-style: italic;
+	line-height: 24px;
+}
+
+.comment_text{
+	font-size: 16px;
+	font-family: Arial, sans-serif;
+	color: #3b4149;
+}
+
+#comment_author{
+	font-weight: 700;
+	width: 200px;
+	height: 30px;
+	background: #f4f4f4;
+	padding: 0 6px 0 6px;
+}
+
+#comment_field{
+	width: 288px;
+	height: 188px;
+	background: #f4f4f4;
+	padding: 6px;
+}
+
+.all_tags_body{
+	font: 18px;
+	font-family: Arial, sans-serif;
+	font-weight: normal;
+	padding-left: 40px;
+}
+
+#all_articles_link{
+	position: relative;
+	left: 40px;
+}
+
+.search_home_field_label{
+	line-height: 30px;
+	font-family: Arial, sans-serif;
+	font-style: italic;
+	color: #232254;
+	font-weight: 600;
+	font-size: 14px;
+	position: relative;
+	left: 30px;
+}
+
+.search_home_select_field{
+	width: 100px;
+	height: 26px;
+	border: 1px solid aliceblue;
+	border-radius: 2px;
+	background: #ffdba1;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	color: #0e0f39;
+	font-weight: 600;
+	position: relative;
+	left: 30px;
+}
+
+#search_home_submit_button{
+	width: 84px;
+	margin-top: 12px;
+	height: 28px;
+	font-size: 14px;
+	border-radius: 2px;
+	border: 2px outset #7d361b;
+	position: relative;
+	background: #9fedea;
+	color: #211004;
+	left: 30px;
+}
+
+.search_result_link{
+}
+
+.search_result_link a{
+	color: #34170F;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+.search_result_link a:hover{
+	text-decoration: underline;
+}
+
+#login{
+	position: relative;
+	left: 40px;
+	color: #420d01;
+	font-size: 14px;
+}
+
+#login a{
+	text-decoration: none;
+	color: #420d01;
+	font-size: 14px;
+}
+
+#login a:hover{
+	cursor: pointer;
+	text-decoration: underline;
+	color: black;
+}

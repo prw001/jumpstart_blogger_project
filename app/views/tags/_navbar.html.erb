@@ -1,0 +1,12 @@
+<ul class="navbar_list" id = "popular_list">
+ 	<%  article_list = {}
+    	Article.all.each do |article|
+              article_list[article.impressionist_count] = article
+        end
+        top_list = article_list.keys.sort.reverse[0..2]
+        top_list.each do |key| %>
+        <li class ="nav_item">
+        	<%= link_to article_list[key].title, article_path(article_list[key]) %>
+        </li>
+    <% end %>
+</ul>

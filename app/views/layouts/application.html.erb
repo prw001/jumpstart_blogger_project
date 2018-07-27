@@ -11,16 +11,42 @@
 
   <body>
     <p class = "flash"><%= flash.notice %></p>
+    <div id="navbar">
+      <h3 id = "navbar_header">See all:</h3>
+      <div id="navbar_contents">
+        <ul class="navbar_list" id="see_all_list">
+          <li class="nav_item">
+            <%= link_to "Articles", articles_path %>
+          </li>
+          <li class="nav_item">
+            <%= link_to "Tags", tags_path %>
+          </li>
+          <% if logged_in? %>
+            <li class="nav_item">
+              <%= link_to "Authors", authors_path %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+      <h3 id = "popular">Most Popular:</h3>
+        <div id = "popular_articles">
+          <%= render "navbar" %>
+        </div>
+      <h3 id = "search_header">Search by Publication Date:</h3>
+      <div id ="article_search">
+        <%= render partial: 'search/form' %>
+      </div>
+    </div>
     <div id="container">
       <div id="content">
-        <%= yield %>
-        <hr>
-        <h6>
+       <%= yield %>
+        <hr id="divider_line">
+        <h6 id="login">
           <%if logged_in? %>
             <%= "Logged in as #{current_user.email}" %>
-            <%= link_to "(logout)", logout_path %>
+            | <%= link_to "logout", logout_path %> |
           <% else %>
-            <%= link_to "(login)", login_path %>
+            | <%= link_to "login", login_path %> |
           <% end %>
         </h6>
       </div>

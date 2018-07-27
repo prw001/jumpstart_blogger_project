@@ -1,0 +1,17 @@
+<h1>Search</h1>
+<h3>Showing articles published in <%= @month[5..8] %> <%= @year %>:</h3>
+<div>
+	<% if @relevant_articles.length == 0 %>
+		No articles published in that time frame - try a different search.<br/><br/>
+		<%= link_to "<< Search Home", search_index_path %>
+	<% else %>
+		<% @relevant_articles.each do |article| %>
+		<p class ="search_result_link">
+			<%= link_to article.title, article_path(article)%>
+		</p>
+		<% end %>
+		<span class ="search_result_link">
+			<%= link_to "<< Search Home", search_index_path %>
+		</span>
+	<% end %>
+</div>
