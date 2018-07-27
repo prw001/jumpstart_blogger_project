@@ -63,6 +63,14 @@ body{
 	color: #401608;
 }
 
+#navbar_header{
+	margin: 0;
+}
+
+#popular{
+	margin: 0;
+}
+
 .navbar_list{
 	text-align: left;
 	margin-bottom: 60px;
